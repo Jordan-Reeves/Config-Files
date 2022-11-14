@@ -13,7 +13,7 @@ const staticAssets = {
 const connections = {
     development :{
         http: {
-            port: 3000
+            port: process.env.PORT || process.env.NODE_PORT || 3000,
         },
         mongo: process.env.MONGODB_URI || 'mongodb://localhost/ConfigExample',
         redis: process.env.REDISCLOUD_URL,
